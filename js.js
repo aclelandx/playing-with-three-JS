@@ -20,7 +20,7 @@ function init(x, y) {
 
 
     camera = new THREE.PerspectiveCamera(45, x / y, 3, 0);
-    camera.position.z = 4;
+    camera.position.z = 400;
 
     scene = new THREE.Scene();
 
@@ -40,7 +40,7 @@ function init(x, y) {
     geometry = new THREE.TorusKnotBufferGeometry(15, 3, 100, 8, 2, 3);
     material = new THREE.MeshNormalMaterial();
     mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, 0, 1);
+    mesh.position.set(0, 0, 396);
     mesh.castShadow = true;
     mesh.receiveShadow = false;
     scene.add(mesh);

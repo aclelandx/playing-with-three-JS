@@ -26,10 +26,10 @@ function init(x, y) {
 
     //background that has been added
     let planeGeometry, planeMaterial;
-    planeGeometry = new THREE.PlaneGeometry(100, 100);
+    planeGeometry = new THREE.PlaneGeometry(x, y);
     planeMaterial = new THREE.MeshBasicMaterial({ color: 0xf9fafb, side: THREE.DoubleSide })
     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-    plane.position.set(0, 0, 4)
+    plane.position.set(0, 0, 0)
 
     plane.receiveShadow = true;
     scene.add(plane);
@@ -40,7 +40,7 @@ function init(x, y) {
     geometry = new THREE.TorusKnotBufferGeometry(15, 3, 100, 8, 2, 3);
     material = new THREE.MeshNormalMaterial();
     mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, 0, 0);
+    mesh.position.set(0, 0, 1);
     mesh.castShadow = true;
     mesh.receiveShadow = false;
     scene.add(mesh);

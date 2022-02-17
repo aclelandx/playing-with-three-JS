@@ -9,6 +9,7 @@ const container = document.getElementById('threeJSContainer')
 init(window.innerWidth, window.innerHeight);
 
 window.addEventListener('resize', function () {
+    container.innerHTML = ``;
     const sizeArray = [window.innerWidth, window.innerHeight];
     const [x, y] = sizeArray;
     init(x, y);
